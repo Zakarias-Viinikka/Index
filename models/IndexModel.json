@@ -1,0 +1,21 @@
+{
+    "websites": [{
+            "title": "Demo Bank System",
+            "linkToWebsite": "Bank/",
+            "githubLink": "https://github.com/Zakarias-Viinikka/DemoBank",
+            "imgSrc": "images/bankdemo.PNG"
+        },
+        {
+            "title": "Front end course Shop Demo",
+            "linkToWebsite": "Frontend2Inlupp1/",
+            "githubLink": "https://github.com/Zakarias-Viinikka/Frontend2Inlupp1",
+            "imgSrc": "images/Frontend2Index.PNG"
+        }
+    ],
+    "template": {
+        "title": "",
+        "linkToWebsite": "",
+        "githubLink": "",
+        "imgSrc": ""
+    }
+}

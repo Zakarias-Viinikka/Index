@@ -44,68 +44,60 @@
         a {
             color: #00aFFF;
         }
-        
-        .mobile {
-            padding: 5px;
-            text-align: center;
-        }
-        
-        .mobile img {
-            border: 1px rgba(0, 0, 0, 1) solid;
-        }
-        
-        .mobile a {
-            color: blue;
-        }
-        
-        #content-desktop {
-            display: block;
-        }
-        
-        #content-mobile {
-            display: none;
-        }
-        
-        @media screen and (max-width: 768px) {
-            #content-desktop {
-                display: none;
-            }
-            #content-mobile {
-                display: block;
-            }
-        }
     </style>
 </head>
 
-<body ng-app="myWebsites">
+<body>
     <nav class="navbar navbar-nav">
         <h2 class="title">
             Zakarias Viinikka
         </h2>
     </nav>
     <br>
-
-    <div class="container" id="content-desktop" ng-controller="myCtrl">
+    <div class="container" ng-app="myWebsites" ng-controller="myCtrl">
         <!-- carousel -->
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button ng-repeat="website in websites" ng-if="$index != 0" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="{{$index}}" aria-label="Slide {{$index}}"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <!--<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>-->
             </div>
             <div class="carousel-inner">
-                <div ng-repeat="website in websites" class="carousel-item {{$index === 0 ? 'active' : ''}}">
-                    <img ng-src="{{website.imgSrc}}" class="d-block w-100 carouselImage" alt="{{website.title}}">
+                <div class="carousel-item active">
+                    <img src="images/bankdemo.PNG" class="d-block w-100 carouselImage" alt="bankDemo">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>
-                            <a href="{{website.linkToWebsite}}" class="portfolioSiteLink">
-                                {{website.title}}
+                            <a href="Bank/" class="portfolioSiteLink">
+                                Demo Bank System
                             </a>
                         </h5>
                         <p>
-                            <a href="{{website.githubLink}}">Github</a>
+                            <a href="https://github.com/Zakarias-Viinikka/DemoBank">Github</a>
                         </p>
                     </div>
                 </div>
+                <div class="carousel-item">
+                    <img src="images/Frontend2Index.PNG" class="d-block w-100 carouselImage" alt="Frontend2Inlupp1">
+                    <div class="carousel-caption d-none d-md-block ">
+                        <h5>
+                            <a href="Frontend2Inlupp1/" class="portfolioSiteLink">
+                                Front end course Shop Demo
+                            </a>
+                        </h5>
+                        <p>
+                            <a href="https://github.com/Zakarias-Viinikka/Frontend2Inlupp1">
+                                Github
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                <!--<div class="carousel-item">
+                    <img src="images/imageedit_3_7323844381.png" class="d-block w-100 carouselImage" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>-->
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon " aria-hidden="true "></span>
@@ -117,31 +109,8 @@
             </button>
         </div>
         <!-- carousel -->
-    </div>
 
-    <div class="container" id="content-mobile" ng-controller="myCtrl">
-        <!-- carousel -->
-        <div class="col-12" ng-repeat="website in websites">
-            <div class="mobile">
-                <h5>
-                    <a href="{{website.linkToWebsite}}" class="portfolioSiteLink">
-                        {{website.title}}
-                    </a>
-                </h5><br>
-                <img class="img-fluid" ng-src="{{website.imgSrc}}" class="col-12">
-                <br><br>
-                <div>
-                    <p>
-                        <a href="{{website.githubLink}}">Github</a>
-                    </p>
-                    <hr>
-                </div>
-            </div>
-            <br>
-        </div>
-    </div>
-    <!-- carousel -->
-    <br> &nbsp;&nbsp;&nbsp;This website is hosted on: My pc
+        This website is hosted on: My pc
     </div>
 
     <!-- footer -->
